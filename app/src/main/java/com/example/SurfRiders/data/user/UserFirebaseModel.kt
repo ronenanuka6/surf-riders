@@ -85,29 +85,17 @@ class UserFirebaseModel {
     }
 
     fun addUser(user: User, callback: () -> Unit) {
-        Log.i("userFirebaseModel", "trying to create user:" + user)
 
-        Log.d("userFirebaseModel", "User JSON: ${user.json}")
+        Log.d("userFirebaseModel", "Attempting to add user: $user")
 
-        Log.d("userFirebaseModel", "Collection path: $USERS_COLLECTION_PATH")
-
-
-        db.collection(USERS_COLLECTION_PATH).document(user.id).set(user.json)
-            .addOnSuccessListener {
-                Log.i("userFirebaseModel", "success to create user:" + user)
-                callback()
-            }
-            .addOnFailureListener {
-                Log.i("userFirebaseModel", "error")
-            }
-//        try {
-//            db.collection(USERS_COLLECTION_PATH).document(user.id).set(user.json)
-//                .addOnSuccessListener {
-//                    Log.i("userFirebaseModel", "success to create user:" + user)
-//                    callback()
-//                }
-//        } catch (e: Exception) {
-//            Log.d("userFirebaseModel", "Error: $e")
-//        }
+        try {
+            db.collection(USERS_COLLECTION_PATH).document(user.id).set(user.json)
+                .addOnSuccessListener {
+                    Log.i("userFirebaseModel", "Success creating user:" + user)
+                    callback()
+                }
+        } catch (e: Exception) {
+            Log.d("userFirebaseModel", "Error: $e")
+        }
     }
 }

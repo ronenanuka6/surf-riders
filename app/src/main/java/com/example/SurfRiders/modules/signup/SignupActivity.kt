@@ -124,9 +124,6 @@ class SignupActivity : AppCompatActivity() {
         passwordConfirmationInputLayout = findViewById(R.id.layoutTextPasswordConfirm)
         val passwordConfirmationValue = passwordConfirmationInputEditText.text.toString().trim()
 
-
-
-
         val checkUserValidation = userValidation(firstNameValue,lastNameValue,emailValue,passwordValue,passwordConfirmationValue)
 
         if(checkUserValidation) {
