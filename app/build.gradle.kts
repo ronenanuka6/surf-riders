@@ -8,11 +8,11 @@ plugins {
 }
 
 android {
-    namespace = "com.example.DrinkMaster"
+    namespace = "com.example.SurfRiders"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.example.DrinkMaster"
+        applicationId = "com.example.SurfRiders"
         minSdk = 24
         targetSdk = 34
         versionCode = 1
