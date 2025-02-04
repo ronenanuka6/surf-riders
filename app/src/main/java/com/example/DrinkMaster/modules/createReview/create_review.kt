@@ -146,7 +146,7 @@ class create_review : Fragment() {
 
     @RequiresExtension(extension = Build.VERSION_CODES.R, version = 2)
     private fun defineImageSelectionCallBack() {
-        binding.cocktailPicButton.setOnClickListener {
+        binding.LocationPicButton.setOnClickListener {
             val intent = Intent(Intent.ACTION_GET_CONTENT)
             intent.type = "image/*"
             imageSelectionLauncher.launch(intent)
@@ -166,7 +166,7 @@ class create_review : Fragment() {
                         ).show()
                     } else {
                         viewModel.ImageURI.postValue(imageUri)
-                        binding.cocktailPicButton.setImageURI(imageUri)
+                        binding.LocationPicButton.setImageURI(imageUri)
                     }
                 } catch (e: Exception) {
                     Log.d("NewReview", "Error: $e")

@@ -28,9 +28,9 @@ class ProfileReviewViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView
         reviewImage = itemView.findViewById(R.id.profileReviewCardImage)
         profileImage = itemView.findViewById(R.id.ProfileImageView)
         profileName = itemView.findViewById(R.id.ProfileName)
-        CoktailName = itemView.findViewById(R.id.CoktailName)
-        CoktailDescription = itemView.findViewById(R.id.CoktailDescription)
-        ReviewGrade = itemView.findViewById(R.id.ReviewGrade)
+        CoktailName = itemView.findViewById(R.id.fragment_location_name)
+        CoktailDescription = itemView.findViewById(R.id.fragment_location)
+        ReviewGrade = itemView.findViewById(R.id.location_grade)
         editButton = itemView.findViewById(R.id.EditButton)
         deleteButton = itemView.findViewById(R.id.DeleteButton)
     }

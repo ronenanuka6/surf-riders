@@ -18,7 +18,7 @@ class FeedRecycleAdapter(var reviews: MutableList<Review>?, var users: MutableLi
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): FeedReviewViewHolder {
         val itemView = LayoutInflater.from(parent.context)
-            .inflate(R.layout.coktail_feed_card, parent, false)
+            .inflate(R.layout.location_feed_card, parent, false)
         return FeedReviewViewHolder(itemView)
     }
 

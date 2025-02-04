@@ -11,7 +11,7 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.example.DrinkMaster.databinding.FragmentCocktailsFeedBinding
+import com.example.DrinkMaster.databinding.FragmentLocationFeedBinding
 import com.example.DrinkMaster.modules.feed.FeedRecycleAdapter
 import com.example.DrinkMaster.data.review.ReviewModel
 
@@ -19,7 +19,7 @@ class Feed : Fragment() {
 
         private var reviewsRecyclerView: RecyclerView? = null
         private var adapter: FeedRecycleAdapter? = null
-        private var _binding: FragmentCocktailsFeedBinding? = null
+        private var _binding: FragmentLocationFeedBinding? = null
         private val binding get() = _binding!!
         private lateinit var viewModel: CocktailsFeedViewModel
 
@@ -28,7 +28,7 @@ class Feed : Fragment() {
             inflater: LayoutInflater, container: ViewGroup?,
             savedInstanceState: Bundle?
         ): View {
-            _binding = FragmentCocktailsFeedBinding.inflate(inflater, container, false)
+            _binding = FragmentLocationFeedBinding.inflate(inflater, container, false)
             val view = binding.root
 
             viewModel = ViewModelProvider(this)[CocktailsFeedViewModel::class.java]

@@ -26,7 +26,7 @@
         android:layout_width="351dp"
         android:layout_height="50dp"
         android:layout_marginTop="24dp"
-        android:text="Hi Yosi!"
+        android:text="Hi Ronen!"
         android:textAlignment="center"
         android:textAppearance="@android:style/TextAppearance.Material.Large"
         android:textColor="@color/white"

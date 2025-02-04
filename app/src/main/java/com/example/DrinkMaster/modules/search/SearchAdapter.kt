@@ -15,7 +15,7 @@ class SearchAdapter(var cocktails: MutableList<Cocktail>?) :
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): SearchHolder {
         val itemView = LayoutInflater.from(parent.context)
-            .inflate(R.layout.cocktail_search_card, parent, false)
+            .inflate(R.layout.location_search_card, parent, false)
         return SearchHolder(itemView)
     }
 

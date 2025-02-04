@@ -44,7 +44,7 @@ class EditProfile : Fragment() {
                 } else {
                     viewModel.selectedImageURI.postValue(imageUri)
                     viewModel.imageChanged = true
-                    binding.cocktailPicButton.setImageURI(imageUri)
+                    binding.LocationPicButton.setImageURI(imageUri)
                 }
             } catch (e: Exception) {
                 Log.d("EditMyReview", "Error: $e")
@@ -84,7 +84,7 @@ class EditProfile : Fragment() {
         }
 
         viewModel.selectedImageURI.observe(viewLifecycleOwner) { uri ->
-            Picasso.get().load(uri).into(binding.cocktailPicButton)
+            Picasso.get().load(uri).into(binding.LocationPicButton)
         }
 
         viewModel.firstNameError.observe(viewLifecycleOwner) {
@@ -105,7 +105,7 @@ class EditProfile : Fragment() {
             }
         }
 
-        binding.cocktailPicButton.setOnClickListener {
+        binding.LocationPicButton.setOnClickListener {
             defineImageSelectionCallBack()
         }
 
@@ -120,7 +120,7 @@ class EditProfile : Fragment() {
 
     @RequiresExtension(extension = Build.VERSION_CODES.R, version = 2)
     private fun defineImageSelectionCallBack() {
-        binding.cocktailPicButton.setOnClickListener {
+        binding.LocationPicButton.setOnClickListener {
             val intent = Intent(MediaStore.ACTION_PICK_IMAGES)
             imageSelectionLauncher.launch(intent)
         }

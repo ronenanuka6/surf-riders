@@ -12,7 +12,6 @@ import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.navigation.Navigation
-import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import com.example.DrinkMaster.R
 import com.squareup.picasso.Picasso
@@ -32,7 +31,7 @@ class cocktailFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        root =  inflater.inflate(R.layout.fragment_cocktail, container, false)
+        root =  inflater.inflate(R.layout.surf_spot_details, container, false)
         viewModel = ViewModelProvider(this).get(CocktailViewModel::class.java)
         viewModel.setCocktail(args.chooseCocktail)
 
@@ -41,12 +40,12 @@ class cocktailFragment : Fragment() {
             cocktailsDetails(root)
 
         }
-        root.findViewById<Button>(R.id.AddReviewButton).setOnClickListener {
+        root.findViewById<Button>(R.id.add_location).setOnClickListener {
             viewModel.cocktailDetailsData?.let { cocktail ->
                 val action = cocktailFragmentDirections.actionCocktailFragmentToCreateReview(
                     cocktail.value?.get(0)?.strDrink ?: "Cocktail"
                 )
-                Navigation.findNavController( root.findViewById<Button>(R.id.AddReviewButton)).navigate(action)
+                Navigation.findNavController( root.findViewById<Button>(R.id.add_location)).navigate(action)
             }
         }
 
@@ -54,10 +53,10 @@ class cocktailFragment : Fragment() {
     }
 
     fun cocktailsDetails(root: View) {
-        val cocktailName: TextView = root.findViewById(R.id.coktailTitle)
-        val cocktailIngredient: TextView = root.findViewById(R.id.coktailIngredient)
-        val cocktailInstruction: TextView = root.findViewById(R.id.coktailInstruction)
-        val cocktailImage : ImageView = root.findViewById(R.id.cocktailImage)
+        val cocktailName: TextView = root.findViewById(R.id.location_name)
+        val cocktailIngredient: TextView = root.findViewById(R.id.description)
+        val cocktailInstruction: TextView = root.findViewById(R.id.comment)
+        val cocktailImage : ImageView = root.findViewById(R.id.location_details)
 
         viewModel.cocktailDetailsData.let { cocktail ->
             cocktailName.text = cocktail.value?.get(0)?.strDrink

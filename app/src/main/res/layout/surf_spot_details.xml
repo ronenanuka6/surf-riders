@@ -11,7 +11,7 @@
         android:layout_height="wrap_content">
 
         <ImageView
-            android:id="@+id/cocktailImage"
+            android:id="@+id/location_details"
             android:layout_width="match_parent"
             android:layout_height="115dp"
             android:layout_marginStart="8dp"
@@ -24,26 +24,26 @@
             app:srcCompat="@drawable/android_logo" />
 
         <TextView
-            android:id="@+id/coktailTitle"
+            android:id="@+id/location_name"
             android:layout_width="match_parent"
             android:layout_height="63dp"
-            android:hint="Cocktail Name"
+            android:hint="Location Name"
             android:textAlignment="center"
             android:textColor="@color/white"
             android:textColorHint="@color/white"
             android:textSize="22sp"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.496"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/cocktailImage" />
+            app:layout_constraintTop_toBottomOf="@+id/location_details" />
 
         <TextView
-            android:id="@+id/IngredientTitle"
+            android:id="@+id/description_title"
             android:layout_width="match_parent"
             android:layout_height="44dp"
             android:layout_marginTop="8dp"
-            android:hint="Ingredients:"
+            android:hint="description"
             android:textAlignment="textStart"
             android:textColor="@color/white"
             android:textColorHint="@color/white"
@@ -52,10 +52,10 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.558"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/coktailTitle" />
+            app:layout_constraintTop_toBottomOf="@+id/location_name" />
 
         <TextView
-            android:id="@+id/coktailIngredient"
+            android:id="@+id/description"
             android:layout_width="match_parent"
             android:layout_height="137dp"
             android:layout_marginTop="8dp"
@@ -68,14 +68,14 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.506"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/IngredientTitle" />
+            app:layout_constraintTop_toBottomOf="@+id/description_title" />
 
         <TextView
-            android:id="@+id/InstructionsTitle"
+            android:id="@+id/user_comments"
             android:layout_width="match_parent"
             android:layout_height="40dp"
             android:layout_marginTop="20dp"
-            android:hint="Instructions:"
+            android:hint="User commetns:"
             android:textAlignment="textStart"
             android:textColor="@color/white"
             android:textColorHint="@color/white"
@@ -84,10 +84,10 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.48"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/coktailIngredient" />
+            app:layout_constraintTop_toBottomOf="@+id/description" />
 
         <TextView
-            android:id="@+id/coktailInstruction"
+            android:id="@+id/comment"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="12dp"
@@ -101,10 +101,10 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.522"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/InstructionsTitle" />
+            app:layout_constraintTop_toBottomOf="@+id/user_comments" />
 
         <com.google.android.material.button.MaterialButton
-            android:id="@+id/AddReviewButton"
+            android:id="@+id/add_location"
             android:layout_width="330dp"
             android:layout_height="67dp"
             android:backgroundTint="@color/white"
@@ -115,7 +115,7 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/coktailInstruction"
+            app:layout_constraintTop_toBottomOf="@+id/comment"
             app:layout_constraintVertical_bias="0.108"
             android:layout_marginBottom="100dp" />
 

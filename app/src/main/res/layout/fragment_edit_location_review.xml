@@ -8,7 +8,7 @@
 
 
     <ImageButton
-        android:id="@+id/cocktailPicButton"
+        android:id="@+id/LocationPicButton"
         android:layout_width="172dp"
         android:layout_height="168dp"
         android:layout_marginTop="120dp"
@@ -22,7 +22,7 @@
         app:srcCompat="@drawable/baseline_add_photo_alternate_24" />
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/layoutTextCocktailDescription"
+        android:id="@+id/layoutTextLocationReview"
         android:layout_width="352dp"
         android:layout_height="105dp"
         android:layout_marginTop="88dp"
@@ -39,10 +39,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.493"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cocktailPicButton">
+        app:layout_constraintTop_toBottomOf="@+id/LocationPicButton">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/editTextCocktailDescription"
+            android:id="@+id/editTextLocationReview"
             android:layout_width="332dp"
             android:layout_height="89dp"
             android:background="@drawable/rounded_edittext"
@@ -64,11 +64,11 @@
         app:layout_constraintBottom_toTopOf="@+id/saveButton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/layoutTextCocktailDescription"
+        app:layout_constraintTop_toBottomOf="@+id/layoutTextLocationReview"
         app:layout_constraintVertical_bias="0.523">
 
         <ImageView
-            android:id="@+id/star1EditCocktailReview"
+            android:id="@+id/star1EditLocationReview"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="2dp"
@@ -78,7 +78,7 @@
             android:tag="1" />
 
         <ImageView
-            android:id="@+id/star2EditCocktailReview"
+            android:id="@+id/star2EditLocationReview"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="2dp"
@@ -88,7 +88,7 @@
             android:tag="2" />
 
         <ImageView
-            android:id="@+id/star3EditCocktailReview"
+            android:id="@+id/star3EditLocationReview"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="2dp"
@@ -98,7 +98,7 @@
             android:tag="3" />
 
         <ImageView
-            android:id="@+id/star4EditCocktailReview"
+            android:id="@+id/star4EditLocationReview"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="2dp"
@@ -109,7 +109,7 @@
  />
 
         <ImageView
-            android:id="@+id/star5EditCocktailReview"
+            android:id="@+id/star5EditLocationReview"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="2dp"
@@ -133,7 +133,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.493"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/layoutTextCocktailDescription"
+        app:layout_constraintTop_toBottomOf="@+id/layoutTextLocationReview"
         app:layout_constraintVertical_bias="0.415" />
 
 

@@ -20,13 +20,13 @@ import androidx.core.widget.addTextChangedListener
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import com.example.DrinkMaster.R
-import com.example.DrinkMaster.databinding.FragmentEditCocktailReviewBinding
+import com.example.DrinkMaster.databinding.FragmentEditLocationReviewBinding
 import com.squareup.picasso.Picasso
 
 
 class editCocktailReview : Fragment() {
 
-    private var _binding: FragmentEditCocktailReviewBinding? = null
+    private var _binding: FragmentEditLocationReviewBinding? = null
 
     private val binding get() = _binding!!
     private lateinit var viewModel: EditCocktailReviewViewModel
@@ -51,7 +51,7 @@ class editCocktailReview : Fragment() {
                 } else {
                     viewModel.selectedImageURI.postValue(imageUri)
                     viewModel.imageChanged = true
-                    binding.cocktailPicButton.setImageURI(imageUri)
+                    binding.LocationPicButton.setImageURI(imageUri)
                 }
             } catch (e: Exception) {
                 Log.d("EditReview", "Error: $e")
@@ -66,13 +66,13 @@ class editCocktailReview : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-      _binding = FragmentEditCocktailReviewBinding.inflate(inflater,container,false)
+      _binding = FragmentEditLocationReviewBinding.inflate(inflater,container,false)
         val view = binding.root
-        star1 = binding.star1EditCocktailReview
-        star2 = binding.star2EditCocktailReview
-        star3 = binding.star3EditCocktailReview
-        star4 = binding.star4EditCocktailReview
-        star5 = binding.star5EditCocktailReview
+        star1 = binding.star1EditLocationReview
+        star2 = binding.star2EditLocationReview
+        star3 = binding.star3EditLocationReview
+        star4 = binding.star4EditLocationReview
+        star5 = binding.star5EditLocationReview
 
        viewModel = ViewModelProvider(this).get(EditCocktailReviewViewModel::class.java)
 
@@ -86,7 +86,7 @@ class editCocktailReview : Fragment() {
 
     @RequiresExtension(extension = Build.VERSION_CODES.R, version = 2)
     private fun definePickImageClickListener() {
-        binding.cocktailPicButton.setOnClickListener {
+        binding.LocationPicButton.setOnClickListener {
             defineImageSelectionCallBack()
         }
     }
@@ -104,9 +104,9 @@ class editCocktailReview : Fragment() {
     private fun initFields() {
         val currentReview = args.selectedReview
         viewModel.loadReview(currentReview)
-        binding.editTextCocktailDescription.setText(currentReview.coktailDescription)
+        binding.editTextLocationReview.setText(currentReview.coktailDescription)
 
-        binding.editTextCocktailDescription.addTextChangedListener {
+        binding.editTextLocationReview.addTextChangedListener {
             viewModel.cocktaildescription = it.toString().trim()
         }
         star1.tag = 1
@@ -125,20 +125,20 @@ class editCocktailReview : Fragment() {
             }
         }
 
-        binding.star1EditCocktailReview.setOnClickListener{onStarClicked(star1)}
-        binding.star2EditCocktailReview.setOnClickListener{onStarClicked(star2)}
-        binding.star3EditCocktailReview.setOnClickListener{onStarClicked(star3)}
-        binding.star4EditCocktailReview.setOnClickListener{onStarClicked(star4)}
-        binding.star5EditCocktailReview.setOnClickListener{onStarClicked(star5)}
+        binding.star1EditLocationReview.setOnClickListener{onStarClicked(star1)}
+        binding.star2EditLocationReview.setOnClickListener{onStarClicked(star2)}
+        binding.star3EditLocationReview.setOnClickListener{onStarClicked(star3)}
+        binding.star4EditLocationReview.setOnClickListener{onStarClicked(star4)}
+        binding.star5EditLocationReview.setOnClickListener{onStarClicked(star5)}
 
 
         viewModel.selectedImageURI.observe(viewLifecycleOwner) { uri ->
-            Picasso.get().load(uri).into(binding.cocktailPicButton)
+            Picasso.get().load(uri).into(binding.LocationPicButton)
         }
 
         viewModel.descriptionError.observe(viewLifecycleOwner) {
             if (it.isNotEmpty())
-                binding.editTextCocktailDescription.error = it
+                binding.editTextLocationReview.error = it
         }
 
     }
@@ -164,7 +164,7 @@ class editCocktailReview : Fragment() {
 
     @RequiresExtension(extension = Build.VERSION_CODES.R, version = 2)
     private fun defineImageSelectionCallBack() {
-        binding.cocktailPicButton.setOnClickListener {
+        binding.LocationPicButton.setOnClickListener {
             val intent = Intent(MediaStore.ACTION_PICK_IMAGES)
             imageSelectionLauncher.launch(intent)
         }

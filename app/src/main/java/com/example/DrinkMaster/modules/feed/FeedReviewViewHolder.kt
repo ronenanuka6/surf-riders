@@ -14,9 +14,9 @@ class FeedReviewViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
     val reviewImageView: ImageView? = itemView.findViewById(R.id.profileReviewCardImage)
     val profileImageView: ImageView? = itemView.findViewById(R.id.ProfileImageView)
     val profileName: TextView? = itemView.findViewById(R.id.ProfileName)
-    val coktailName: TextView? = itemView.findViewById(R.id.CoktailName)
-    val coktailDescription: TextView? = itemView.findViewById(R.id.CoktailDescription)
-    val reviewGrade: TextView? = itemView.findViewById(R.id.ReviewGrade)
+    val coktailName: TextView? = itemView.findViewById(R.id.fragment_location_name)
+    val coktailDescription: TextView? = itemView.findViewById(R.id.fragment_location)
+    val reviewGrade: TextView? = itemView.findViewById(R.id.location_grade)
 
     fun bind(review: Review?, user: User?) {
         if (review != null && user != null) {

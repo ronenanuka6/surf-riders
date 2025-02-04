@@ -6,6 +6,16 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+    <!-- Background Image -->
+    <ImageView
+        android:id="@+id/backgroundImage"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/background_image"
+        android:contentDescription="Background Image"
+        android:adjustViewBounds="true"/>
+
     <ImageView
         android:id="@+id/LogoImage"
         android:layout_width="126dp"

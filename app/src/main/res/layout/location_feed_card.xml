@@ -22,7 +22,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:background="@color/black">
+            android:background="@color/white">
 
             <!-- Media -->
             <ImageView
@@ -32,21 +32,21 @@
                 android:contentDescription="Card Image"
                 android:scaleType="centerCrop" />
             <TextView
-                android:id="@+id/CoktailName"
+                android:id="@+id/fragment_location_name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
-                android:text="Coktail Name"
+                android:text="Surf Spot"
                 android:textAppearance="?attr/textAppearanceHeadline6"
-                android:textColor="@color/white" />
+                android:textColor="@color/black" />
 
             <TextView
-                android:id="@+id/CoktailDescription"
+                android:id="@+id/fragment_location"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
-                android:text="Coktail description"
-                android:textColor="@color/white"
+                android:text="Location"
+                android:textColor="@color/black"
                 android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
 
 
@@ -79,20 +79,20 @@
                         android:layout_height="wrap_content"
                         android:paddingLeft="3dp"
                         android:paddingTop="8dp"
-                        android:text="ohad albalgy"
+                        android:text="Ronen Anuka"
                         android:textAppearance="?attr/textAppearanceHeadline6"
-                        android:textColor="@color/white"
+                        android:textColor="@color/black"
                         android:textSize="15sp" />
 
                 </LinearLayout>
 
                 <TextView
-                    android:id="@+id/ReviewGrade"
+                    android:id="@+id/location_grade"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="16dp"
-                    android:text="Grade: "
-                    android:textColor="@color/white"
+                    android:text="User rating: "
+                    android:textColor="@color/black"
                     android:textAppearance="?attr/textAppearanceBody2"
                     android:textSize="15sp"
                     android:textStyle="bold" />
